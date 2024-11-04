@@ -20,12 +20,12 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.x'
+          
+      - name: Set permissions for tailwindcss
+        run: chmod +x ./node_modules/.bin/tailwindcss
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
-        
-      - name: Set permissions for tailwindcss
-        run: chmod +x ./node_modules/.bin/tailwindcss
         
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
