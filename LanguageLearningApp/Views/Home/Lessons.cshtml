@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Lessons";
+}
+
+<div class="container mx-auto px-4 py-8 bg-gray-100">
+    <h1 class="text-4xl font-bold text-center text-teal-700">Polish Lessons</h1>
+    <p class="text-center text-gray-600 mt-2">Master the Polish language with our structured lessons</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        @foreach (var lesson in Model)
+        {
+            <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <h2 class="text-2xl font-semibold text-orange-600">@lesson.Title</h2>
+                <p class="text-gray-700 mt-4">@lesson.Content</p>
+                <a href="@Url.Action("LessonDetail", new { id = lesson.Id })" 
+                   class="mt-4 inline-block text-teal-700 hover:text-orange-600 font-medium hover:underline">
+                    Learn more
+                </a>
+            </div>
+        }
+    </div>
+</div>
