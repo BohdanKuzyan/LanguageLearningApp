@@ -25,11 +25,11 @@ jobs:
           node-version: '16'  # Upewnij się, że wersja Node.js jest kompatybilna z Twoimi zależnościami
 
       - name: Install npm dependencies
-        working-directory: LanguageLearningApp/LanguageLearningApp
+        working-directory: LanguageLearningApp/LanguageLearningApp  # Poprawiona ścieżka
         run: npm install
 
       - name: Build TailwindCSS
-        working-directory: LanguageLearningApp/LanguageLearningApp
+        working-directory: LanguageLearningApp/LanguageLearningApp  # Poprawiona ścieżka
         run: npm run css:build
 
       - name: Build with dotnet
