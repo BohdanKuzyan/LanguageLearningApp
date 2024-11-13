@@ -34,7 +34,10 @@ jobs:
       - name: Install npm dependencies
         working-directory: LanguageLearningApp  # Poprawiona ścieżka
         run: npm install
-
+      - name: Set execution permissions for TailwindCSS
+        working-directory: LanguageLearningApp
+        run: chmod +x ./node_modules/.bin/tailwindcss
+        
       - name: Build TailwindCSS
         working-directory: LanguageLearningApp  # Poprawiona ścieżka
         run: npm run css:build
