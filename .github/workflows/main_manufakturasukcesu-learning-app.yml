@@ -14,6 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Dodany krok diagnostyczny do sprawdzenia struktury katalogów
+      - name: List files in root directory
+        run: ls -la
+
+      - name: List files in working directory LanguageLearningApp
+        run: ls -la LanguageLearningApp
+
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
