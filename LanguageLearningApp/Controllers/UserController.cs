@@ -10,7 +10,10 @@ namespace PolishLearningApp.Controllers
     {
         private readonly ApplicationDbContext _context;
         // private ApplicationDbContext db = new ApplicationDbContext();
-
+        public UserController(ApplicationDbContext context)
+        {
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+        }
         public ActionResult Register()
         {
             return View();
@@ -48,9 +51,14 @@ namespace PolishLearningApp.Controllers
         {
             try
             {
-                // Sprawdzenie połączenia z bazą danych - np. proste zapytanie do tabeli `Products`.
-                var products = await _context.Products.FirstOrDefaultAsync();
-                if (products != null)
+                if (_context == null)
+                {
+                    ViewBag.Message = "Błąd: Kontekst bazy danych nie został poprawnie zainicjalizowany.";
+                    return View();
+                }
+
+                var product = await _context.Products.FirstOrDefaultAsync();
+                if (product != null)
                 {
                     ViewBag.Message = "Połączenie z bazą danych działa poprawnie.";
                 }
@@ -66,5 +74,6 @@ namespace PolishLearningApp.Controllers
 
             return View();
         }
+
     }
 }
