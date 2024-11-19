@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LanguageLearningApp.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace PolishLearningApp.Controllers
 {
@@ -6,6 +8,7 @@ namespace PolishLearningApp.Controllers
     
     public class UserController : Controller
     {
+        private readonly ApplicationDbContext _context;
         // private ApplicationDbContext db = new ApplicationDbContext();
 
         public ActionResult Register()
@@ -36,9 +39,31 @@ namespace PolishLearningApp.Controllers
             // Mock login logic
             if (username == "test" && password == "password")
             {
-                return RedirectToAction("Lessons", "Home");
+                return RedirectToAction("Privacy", "Home");
             }
             ModelState.AddModelError("", "Invalid username or password");
+            return View();
+        }
+        public async Task<IActionResult> CheckDatabaseConnection()
+        {
+            try
+            {
+                // Sprawdzenie połączenia z bazą danych - np. proste zapytanie do tabeli `Products`.
+                var products = await _context.Products.FirstOrDefaultAsync();
+                if (products != null)
+                {
+                    ViewBag.Message = "Połączenie z bazą danych działa poprawnie.";
+                }
+                else
+                {
+                    ViewBag.Message = "Połączenie z bazą danych działa, ale brak danych w tabeli 'Products'.";
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = $"Błąd połączenia z bazą danych: {ex.Message}";
+            }
+
             return View();
         }
     }

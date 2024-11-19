@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A0084DCD-C214-4132-ABCC-2635D28A5CA1}|LanguageLearningApp\\LanguageLearningApp.csproj|c:\\users\\bohda\\source\\repos\\languagelearningapp\\languagelearningapp\\languagelearningapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A0084DCD-C214-4132-ABCC-2635D28A5CA1}|LanguageLearningApp\\LanguageLearningApp.csproj|solutionrelative:languagelearningapp\\languagelearningapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A0084DCD-C214-4132-ABCC-2635D28A5CA1}|LanguageLearningApp\\LanguageLearningApp.csproj|c:\\users\\bohda\\source\\repos\\languagelearningapp\\languagelearningapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A0084DCD-C214-4132-ABCC-2635D28A5CA1}|LanguageLearningApp\\LanguageLearningApp.csproj|solutionrelative:languagelearningapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -39,6 +43,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LanguageLearningApp",
+              "DocumentMoniker": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\LanguageLearningApp.csproj",
+              "RelativeDocumentMoniker": "LanguageLearningApp\\LanguageLearningApp.csproj",
+              "ToolTip": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\LanguageLearningApp.csproj",
+              "RelativeToolTip": "LanguageLearningApp\\LanguageLearningApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-19T22:48:25.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "LanguageLearningApp\\Views\\Shared\\_Layout.cshtml",
@@ -51,20 +67,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LanguageLearningApp",
+              "DocumentIndex": 2,
+              "Title": "LanguageLearningApp.csproj",
               "DocumentMoniker": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\LanguageLearningApp.csproj",
               "RelativeDocumentMoniker": "LanguageLearningApp\\LanguageLearningApp.csproj",
               "ToolTip": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\LanguageLearningApp.csproj",
               "RelativeToolTip": "LanguageLearningApp\\LanguageLearningApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-02T17:35:02.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T17:35:02.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "LanguageLearningApp\\wwwroot\\css\\site.css",
@@ -72,12 +87,11 @@
               "RelativeToolTip": "LanguageLearningApp\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-02T17:31:58.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T17:31:58.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "tailwind.config.js",
               "DocumentMoniker": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\tailwind.config.js",
               "RelativeDocumentMoniker": "LanguageLearningApp\\tailwind.config.js",
@@ -85,12 +99,11 @@
               "RelativeToolTip": "LanguageLearningApp\\tailwind.config.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-02T17:31:22.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T17:31:22.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\package.json",
               "RelativeDocumentMoniker": "LanguageLearningApp\\package.json",
@@ -98,8 +111,7 @@
               "RelativeToolTip": "LanguageLearningApp\\package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-02T17:29:56.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T17:29:56.777Z"
             },
             {
               "$type": "Bookmark",
