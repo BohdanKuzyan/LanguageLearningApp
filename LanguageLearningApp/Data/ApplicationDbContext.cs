@@ -11,4 +11,5 @@ public class ApplicationDbContext : DbContext
     {
     }
     public DbSet<User> Users { get; set; }
+    public DbSet<Kody_Rejestracji> Kody_Rejestracji{get;set;}
 }

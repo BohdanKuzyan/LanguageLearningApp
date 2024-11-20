@@ -1,22 +1,84 @@
 ﻿@model User
 @{
-    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+    ViewBag.Title = "Rejestracja";
 }
 
-<div class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold">Register</h1>
-    @using (Html.BeginForm())
+<div class="bg-gray-900 text-white p-8 rounded-lg shadow-md w-full max-w-md mx-auto">
+    <h1 class="text-3xl font-bold text-center mb-6">Rejestracja</h1>
+    @using (Html.BeginForm("Register", "User", FormMethod.Post))
     {
+        <!-- Imię -->
         <div class="mb-4">
-            @Html.LabelFor(model => model.Username, new { @class = "block text-sm font-medium text-gray-700" })
-            @Html.TextBoxFor(model => model.Username, new { @class = "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" })
-            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-red-500 text-sm" })
+            @Html.LabelFor(model => model.Imie, "Imię", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.TextBoxFor(model => model.Imie, new { @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            @Html.ValidationMessageFor(model => model.Imie, "", new { @class = "text-red-500 text-sm" })
         </div>
+
+        <!-- Nazwisko -->
         <div class="mb-4">
-            @Html.LabelFor(model => model.Password, new { @class = "block text-sm font-medium text-gray-700" })
-            @Html.PasswordFor(model => model.Password, new { @class = "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" })
-            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-red-500 text-sm" })
+            @Html.LabelFor(model => model.Nazwisko, "Nazwisko", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.TextBoxFor(model => model.Nazwisko, new { @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            @Html.ValidationMessageFor(model => model.Nazwisko, "", new { @class = "text-red-500 text-sm" })
         </div>
-        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Register</button>
+
+        <!-- E-mail -->
+        <div class="mb-4">
+            @Html.LabelFor(model => model.Email, "Email", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.TextBoxFor(model => model.Email, new { @type = "email", @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-red-500 text-sm" })
+        </div>
+
+        <!-- Hasło -->
+        <div class="mb-4">
+            @Html.LabelFor(model => model.PlainTextPassword, "Hasło", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.PasswordFor(model => model.PlainTextPassword, new { @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            <small class="text-gray-500">Min. 8 znaków, w tym wielka litera, mała litera i cyfra.</small>
+            @Html.ValidationMessageFor(model => model.PlainTextPassword, "", new { @class = "text-red-500 text-sm" })
+        </div>
+
+        <!-- Powtórz hasło -->
+        <div class="mb-4">
+            @Html.Label("ConfirmPassword", "Powtórz hasło", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.Password("ConfirmPassword", null, new { @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            @Html.ValidationMessage("ConfirmPassword", "", new { @class = "text-red-500 text-sm" })
+        </div>
+
+        <!-- Awatar -->
+        <div class="mb-4">
+            <span class="block text-sm font-medium text-gray-300">Awatar</span>
+            <div class="mt-1 flex space-x-4">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="Awatar" value="inne" checked class="form-radio text-indigo-600">
+                    <img src="~/images/register_icons/n.png" alt="inne" class="w-6 h-6 ml-2">
+                    <span class="ml-2">Inne</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="Awatar" value="facet" class="form-radio text-indigo-600">
+                    <img src="~/images/register_icons/m.png" alt="Facet" class="w-6 h-6 ml-2">
+                    <span class="ml-2">Mężczyzna</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="Awatar" value="kobieta" class="form-radio text-indigo-600">
+                    <img src="~/images/register_icons/w.png" alt="Kobieta" class="w-6 h-6 ml-2">
+                    <span class="ml-2">Kobieta</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Tekst nad jednorazowym kodem aktywacyjnym -->
+        <div class="mb-4">
+            <p class="text-sm text-gray-500">Wprowadź jednorazowy kod aktywacyjny, który został przekazany Tobie przez nauczyciela</p>
+            @Html.Label("ActivationCode", "KOD aktywacyjny", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.TextBox("ActivationCode", null, new { @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            @Html.ValidationMessage("ActivationCode", "", new { @class = "text-red-500 text-sm" })
+        </div>
+
+        <!-- Przycisk rejestracji -->
+        <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Zarejestruj się</button>
     }
+
+    <div class="mt-6 text-center">
+        <p class="text-gray-500">Masz już konto? <a href="/User/Login" class="text-blue-400 hover:underline">Zaloguj się</a></p>
+    </div>
 </div>
