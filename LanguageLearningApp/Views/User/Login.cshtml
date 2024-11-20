@@ -1,20 +1,26 @@
 ﻿@{
-    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+    ViewBag.Title = "Logowanie";
 }
 
-<div class="container mx-auto px-4">
-    <h1 class="text-3xl font-bold">Login</h1>
+<div class="bg-gray-900 text-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center mb-6">LOGOWANIE</h1>
+    <p class="text-center text-gray-400 mb-6">Wprowadź proszę swój login i hasło!</p>
     @using (Html.BeginForm())
     {
         <div class="mb-4">
-            @Html.Label("Username", "Username", new { @class = "block text-sm font-medium text-gray-700" })
-            @Html.TextBox("username", null, new { @class = "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" })
+            @Html.Label("Username", "Login", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.TextBox("username", null, new { @class = "mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm text-white" })
         </div>
-        <div class="mb-4">
-            @Html.Label("Password", "Password", new { @class = "block text-sm font-medium text-gray-700" })
-            @Html.Password("password", null, new { @class = "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" })
+        <div class="mb-6">
+            @Html.Label("Password", "Hasło", new { @class = "block text-sm font-medium text-gray-300" })
+            @Html.Password("password", null, new { @class = "mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm text-white" })
         </div>
-        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Login</button>
-        @Html.ValidationSummary(true, "", new { @class = "text-red-500 text-sm" })
+        <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Zaloguj</button>
+        @Html.ValidationSummary(true, "", new { @class = "text-red-500 text-sm mt-4" })
     }
+
+    <div class="mt-6 text-center">
+        <p class="text-gray-400">Nie masz jeszcze konta? <a href="/User/Register" class="text-blue-400 hover:underline">Zarejestruj się</a></p>
+    </div>
 </div>

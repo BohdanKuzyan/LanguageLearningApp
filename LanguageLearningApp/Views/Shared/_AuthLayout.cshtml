@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LanguageLearningApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LanguageLearningApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body class="min-h-screen flex flex-col justify-between relative bg-[#03655D] overflow-hidden">
+
+    <!-- Literki oraz znaki diakrytyczne -->
+    <div class="absolute inset-0 overflow-hidden">
+
+        <!-- Powtórzone literki ze zwiększoną częstotliwością -->
+        <div class="absolute top-10 left-12 text-[#FF6B00] text-6xl font-bold  opacity-90 transform rotate-12">
+            ą
+        </div>
+        <div class="absolute top-1/3 right-16 text-[#FF6B00] text-8xl font-bold  opacity-90 transform rotate-45">
+            ś
+        </div>
+        <div class="absolute bottom-20 left-1/4 text-[#FF6B00] text-7xl font-bold  opacity-90 transform -rotate-12">
+            ż
+        </div>
+        <div class="absolute bottom-10 right-10 text-[#FF6B00] text-5xl font-bold  opacity-90 transform rotate-6">
+            ł
+        </div>
+        <div class="absolute top-1/4 left-1/3 text-[#FF6B00] text-9xl font-bold  opacity-90 transform -rotate-18">
+            ć
+        </div>
+        <div class="absolute top-1/2 right-1/5 text-[#FF6B00] text-6xl font-bold  opacity-90 transform rotate-24">
+            ń
+        </div>
+
+        <!-- Dodatkowe instancje literek -->
+        <div class="absolute top-16 left-1/5 text-[#FF6B00] text-5xl font-bold  opacity-90 transform rotate-6">
+            ć
+        </div>
+        <div class="absolute top-1/2 left-10 text-[#FF6B00] text-4xl font-bold  opacity-90 transform -rotate-6">
+            ż
+        </div>
+        <div class="absolute top-3/4 right-12 text-[#FF6B00] text-6xl font-bold  opacity-90 transform rotate-18">
+            ą
+        </div>
+        <div class="absolute bottom-1/3 left-1/6 text-[#FF6B00] text-7xl font-bold  opacity-90 transform -rotate-9">
+            ś
+        </div>
+        <div class="absolute bottom-1/4 right-1/3 text-[#FF6B00] text-5xl font-bold  opacity-90 transform rotate-30">
+            ł
+        </div>
+        <div class="absolute bottom-5 left-1/5 text-[#FF6B00] text-4xl font-bold  opacity-90 transform rotate-15">
+            ń
+        </div>
+        <div class="absolute top-3/4 left-1/4 text-[#FF6B00] text-6xl font-bold  opacity-90 transform -rotate-12">
+            ć
+        </div>
+        <div class="absolute top-10 right-1/4 text-[#FF6B00] text-8xl font-bold  opacity-90 transform rotate-18">
+            ż
+        </div>
+        <div class="absolute bottom-3 right-1/5 text-[#FF6B00] text-6xl font-bold  opacity-90 transform -rotate-45">
+            ś
+        </div>
+        <div class="absolute top-1/5 right-1/5 text-[#FF6B00] text-5xl font-bold  opacity-90 transform rotate-10">
+            ą
+        </div>
+
+    </div>
+
+    <main role="main" class="flex-grow flex items-center justify-center relative z-10">
+        @RenderBody()
+    </main>
+
+    <footer class="w-full border-t py-4 bg-white text-gray-600 relative z-10">
+        <div class="container mx-auto text-center">
+            &copy; 2024 - LanguageLearningApp - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-blue-500 hover:underline">Privacy</a>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
