@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.literki{
+    background-image: url('../images/background/background-letters.png');
+
+}
