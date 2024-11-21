@@ -14,7 +14,9 @@ module.exports = {
                 },
                 gray: {
                     100: '#F5F5F5',  // Light gray background similar to the one used on the site
-                }
+                },
+                'custom_orange': '#FF6B00',
+                'custom_green': '#03655D'
             },
         },
     },

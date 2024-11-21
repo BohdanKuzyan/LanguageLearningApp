@@ -6,7 +6,7 @@
 
 <div class="bg-gray-900 text-white p-8 rounded-lg shadow-md w-full max-w-md mx-auto">
     <h1 class="text-3xl font-bold text-center mb-6">Rejestracja</h1>
-    @using (Html.BeginForm("Register", "User", FormMethod.Post))
+    @using (Html.BeginForm("RegisterView", "User", FormMethod.Post))
     {
         <!-- Imię -->
         <div class="mb-4">
@@ -79,6 +79,6 @@
     }
 
     <div class="mt-6 text-center">
-        <p class="text-gray-500">Masz już konto? <a href="/User/Login" class="text-blue-400 hover:underline">Zaloguj się</a></p>
+        <p class="text-gray-500">Masz już konto? <a href="/User/LoginView" class="text-blue-400 hover:underline">Zaloguj się</a></p>
     </div>
 </div>

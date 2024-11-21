@@ -1,0 +1,12 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    // Używamy HttpContextAccessor, aby pobrać dostęp do HttpContext i sesji
+    var layoutName = HttpContextAccessor.HttpContext.Session.GetString("Layout") ?? "_Layout";
+    Layout = $"~/Views/Shared/{layoutName}.cshtml";
+    ViewData["Title"] = "Privacy";
+}
+
+<h1>@ViewData["Privacy"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
