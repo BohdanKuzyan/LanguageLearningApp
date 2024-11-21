@@ -1,0 +1,107 @@
+﻿@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LanguageLearningApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LanguageLearningApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col">
+<header class="bg-custom_orange border-b shadow mb-4">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div>
+            <a class="text-xl font-bold text-gray-900" asp-area="" asp-controller="Home" asp-action="UserPanelView">
+                <img src="~/images/Logos/LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png" alt="LanguageLearningApp Logo" class="h-14 w-auto">
+            </a>
+        </div>
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900" type="button" aria-label="Toggle navigation">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:items-center lg:space-x-6">
+            <a class="text-white hover:text-custom_green text-xs font-bold" asp-area="" asp-controller="Home" asp-action="FlashcardsView">Флеш-картки</a>
+            <a class="text-white hover:text-custom_green text-xs font-bold" asp-area="" asp-controller="Home" asp-action="QuizView">Тести</a>
+            <a class="text-white hover:text-custom_green text-xs font-bold" asp-area="" asp-controller="Home" asp-action="GrammarPDFView">Граматика</a>
+            <div>
+                <a class="text-xl font-bold text-gray-900" asp-area="" asp-controller="Home" asp-action="SetPolishLayout">
+                    <img src="~/images/language_icons/pl.png" alt="PL language" class="h-5 w-auto">
+                </a>
+            </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <!-- Dodanie avatara -->
+                <div class="relative ml-4">
+                    <button id="avatar-button" class="focus:outline-none focus:ring-2 focus:ring-gray-900">
+                        @* Wybieranie odpowiedniego obrazu w zależności od wartości z bazy danych *@
+                        @{
+                            var avatarType = (User as ClaimsPrincipal)?.FindFirst("Awatar")?.Value ?? "inne";
+                            string avatarFileName = avatarType switch
+                            {
+                                "facet" => "m.png",
+                                "kobieta" => "w.png",
+                                _ => "n.png"
+                            };
+                        }
+                        <img src="@Url.Content($"~/images/register_icons/{avatarFileName}")" alt="User Avatar" class="w-11 h-11 rounded-full">
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="avatar-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-20">
+                        <form asp-controller="User" asp-action="Logout" method="post" class="block w-full text-left">
+                            <button type="submit" class="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Вийти</button>
+                        </form>
+                        <form asp-controller="Home" asp-action="UserPanelView" method="post" class="block w-full text-left">
+                            <button type="submit" class="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Панель користувача</button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+    </nav>
+</header>
+
+<div class="container mx-auto px-4 flex-grow">
+    <main role="main" class="py-6">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="border-t mt-6 py-4 bg-custom_green text-white">
+    <div class="container mx-auto text-center">
+        &copy; 2024 - LanguageLearningApp - <a asp-area="" asp-controller="Home" asp-action="PrivacyView" class="text-blue-300 hover:underline">Конфіденційність</a>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script>
+    // Kod do otwierania/zamykania menu mobilnego
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Kod do otwierania/zamykania menu avatara użytkownika
+    document.getElementById('avatar-button').addEventListener('click', function() {
+        var avatarMenu = document.getElementById('avatar-menu');
+        avatarMenu.classList.toggle('hidden');
+    });
+
+    // Dodanie funkcji zamykania dropdownu po kliknięciu na zewnątrz
+    window.addEventListener('click', function(e) {
+        var avatarButton = document.getElementById('avatar-button');
+        var avatarMenu = document.getElementById('avatar-menu');
+        if (!avatarButton.contains(e.target) && !avatarMenu.contains(e.target)) {
+            avatarMenu.classList.add('hidden');
+        }
+    });
+</script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

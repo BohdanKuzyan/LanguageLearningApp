@@ -1,0 +1,12 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    // Używamy HttpContextAccessor, aby pobrać dostęp do HttpContext i sesji
+    var layoutName = HttpContextAccessor.HttpContext.Session.GetString("Layout") ?? "_Layout";
+    Layout = $"~/Views/Shared/{layoutName}.cshtml";
+    ViewData["Title"] = "Testy";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Testy</h1>
+</div>
