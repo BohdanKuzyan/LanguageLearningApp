@@ -36,6 +36,7 @@ namespace PolishLearningApp.Controllers
         [AllowAnonymous]
         public async Task<ActionResult> Register(User user, string confirmPassword, string activationCode)
         {
+            ModelState.Clear();
             // Validate if passwords match
             if (user.PlainTextPassword != confirmPassword)
             {
@@ -51,13 +52,11 @@ namespace PolishLearningApp.Controllers
             {
                 ModelState.AddModelError("PlainTextPassword", "Hasło musi mieć co najmniej 8 znaków, zawierać wielką literę, małą literę i cyfrę.");
             }
-
             // Validate the activation code
             if (string.IsNullOrEmpty(activationCode))
             {
                 ModelState.AddModelError("ActivationCode", "Kod aktywacyjny jest wymagany.");
             }
-
             // Check if the activation code is valid
             var validCode = await _context.Kody_Rejestracji
                 .AsNoTracking()
@@ -67,7 +66,6 @@ namespace PolishLearningApp.Controllers
             {
                 ModelState.AddModelError("ActivationCode", "Nieprawidłowy kod aktywacyjny.");
             }
-
             // If all is valid, convert the password and save
             if (ModelState.IsValid)
             {
@@ -83,11 +81,7 @@ namespace PolishLearningApp.Controllers
             // If there are validation errors, return to the view
             return View(user);
         }
-
-
-
-
-
+        
         [AllowAnonymous]
         public ActionResult Login()
         {
@@ -115,11 +109,8 @@ public async Task<ActionResult> Login(string email, string password)
 
     // Hash the input password
     byte[] hashedPassword;
-    using (var sha256 = SHA256.Create())
-    {
-        hashedPassword = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-    }
-
+    hashedPassword = System.Text.Encoding.UTF8.GetBytes(password);
+    
     var user = await _context.Users
         .AsNoTracking()
         .FirstOrDefaultAsync(u => u.Email == email && u.Haslo.SequenceEqual(hashedPassword));
