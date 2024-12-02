@@ -20,10 +20,6 @@
 		<UpToDateCheckBuilt Include="tailwind.config.js" Set="Css" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="wwwroot\PDF\" />
-	</ItemGroup>
-
 	<Target Name="Tailwind" BeforeTargets="Build">
 		<Exec Command="npm run css:build" />
 	</Target>

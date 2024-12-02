@@ -4,9 +4,66 @@
     // Używamy HttpContextAccessor, aby pobrać dostęp do HttpContext i sesji
     var layoutName = HttpContextAccessor.HttpContext.Session.GetString("Layout") ?? "_Layout";
     Layout = $"~/Views/Shared/{layoutName}.cshtml";
-    ViewData["Title"] = "Gramatyka";
+    ViewData["Title"] = "Граматика (Gramatyka)";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Gramatyka</h1>
+<div id="pdf-viewer-container" class="container mx-auto p-4 bg-white shadow-lg rounded-lg overflow-auto max-w-screen-lg">
+    <div id="pdf-viewer" class="space-y-12"></div> <!-- Odstęp między stronami ustawiony na 'space-y-12' -->
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.worker.min.js"></script>
+
+<script>
+    // URL do pliku PDF
+    var pdfUrl = '@Url.Content("~/pdf/Gramar.pdf")';
+
+    // Ustawienia PDF.js
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.worker.min.js';
+
+    // Pobierz dokument PDF
+    var loadingTask = pdfjsLib.getDocument(pdfUrl);
+    loadingTask.promise.then(function(pdf) {
+        // Pobierz div, do którego renderowany będzie PDF
+        var container = document.getElementById('pdf-viewer');
+
+        // Wczytaj wszystkie strony po kolei
+        for (var pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+            pdf.getPage(pageNumber).then(function(page) {
+                var scale = 1.5;
+                var viewport = page.getViewport({ scale: scale });
+
+                // Utwórz element canvas dla każdej strony
+                var canvas = document.createElement('canvas');
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                canvas.classList.add('mx-auto', 'border-b', 'pb-8'); // Wycentruj canvas, dodaj dolną granicę (oddzielenie stron)
+
+                // Dodaj canvas do kontenera
+                container.appendChild(canvas);
+
+                // Renderuj stronę w elemencie canvas
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                page.render(renderContext);
+            });
+        }
+    }, function (reason) {
+        // Obsłuż błędy
+        console.error("Błąd podczas ładowania pliku PDF: ", reason);
+    });
+</script>
+
+<style>
+    /* Dodatkowe style do odpowiedniego wyglądu */
+    #pdf-viewer-container {
+        max-width: 100%; /* Maksymalna szerokość */
+        padding-bottom: 2rem; /* Odstęp od stopki */
+    }
+    #pdf-viewer {
+        padding: 1.5rem;
+    }
+</style>

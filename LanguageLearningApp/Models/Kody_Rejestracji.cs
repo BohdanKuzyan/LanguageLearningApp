@@ -1,4 +1,6 @@
-﻿namespace LanguageLearningApp.Models;
+﻿using System.Runtime.InteropServices.JavaScript;
+
+namespace LanguageLearningApp.Models;
 using System.ComponentModel.DataAnnotations;
 public class Kody_Rejestracji
 {
@@ -6,4 +8,6 @@ public class Kody_Rejestracji
     public int Id { get; set; }
     [Required]
     public string KOD { get; set; }
+    [Required]
+    public JSType.Date ExpiredAt { get; set; }
 }

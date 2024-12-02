@@ -1,0 +1,32 @@
+﻿@model IEnumerable<LanguageLearningApp.Models.Dzial>
+
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var layoutName = HttpContextAccessor.HttpContext.Session.GetString("Layout") ?? "_Layout";
+    Layout = $"~/Views/Shared/{layoutName}.cshtml";
+    ViewData["Title"] = "Fiszki";
+}
+
+<div class="text-center mb-8">
+    <h1 class="text-3xl font-bold text-gray-900">Fiszki</h1>
+</div>
+
+<div class="container mx-auto px-4">
+    <!-- Tworzenie kafelków dla każdej jednostki -->
+    @if (Model != null && Model.Any())
+    {
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            @foreach (var dzial in Model)
+            {
+                <div class="bg-white rounded-full shadow-lg p-6 hover:bg-blue-100 transition">
+                    <h2 class="text-lg font-semibold text-gray-800">@dzial.Nazwa</h2>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-center text-gray-700">Brak dostępnych działów do wyświetlenia.</p>
+    }
+</div>

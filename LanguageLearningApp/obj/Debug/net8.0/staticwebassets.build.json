@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zHf/ZetzWA0b57EtYo+BCZYxEJFYzYgrTyvNRhV09pU=",
+  "Hash": "3SSo88HPIdkqjAb4O7Wgpef6vHuQdyLINo62aRT5644=",
   "Source": "LanguageLearningApp",
   "BasePath": "_content/LanguageLearningApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "LanguageLearningApp\\wwwroot",
       "Source": "LanguageLearningApp",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LanguageLearningApp.styles.css",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LanguageLearningApp.styles.css",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "LanguageLearningApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LanguageLearningApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\LanguageLearningApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LanguageLearningApp.bundle.scp.css",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LanguageLearningApp.bundle.scp.css",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "LanguageLearningApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LanguageLearningApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LanguageLearningApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\site.css",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\styles.css",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\styles.css",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\favicon.ico",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\background\\background-letters.png",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\background\\background-letters.png",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "images/background/background-letters.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\background\\background-letters.png"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\pl.png",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\pl.png",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "images/language_icons/pl.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\images\\language_icons\\pl.png"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\ua.png",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\ua.png",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "images/language_icons/ua.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\images\\language_icons\\ua.png"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\Logos\\LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\Logos\\LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "images/Logos/LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Logos\\LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\m.png",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\m.png",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "images/register_icons/m.png",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\images\\register_icons\\m.png"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\n.png",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\n.png",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "images/register_icons/n.png",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\images\\register_icons\\n.png"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\w.png",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\w.png",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "images/register_icons/w.png",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\images\\register_icons\\w.png"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\js\\site.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "LanguageLearningApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
       "BasePath": "_content/LanguageLearningApp",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -490,6 +490,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\PDF\\Gramar.pdf",
+      "SourceId": "LanguageLearningApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\",
+      "BasePath": "_content/LanguageLearningApp",
+      "RelativePath": "PDF/Gramar.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\Gramar.pdf"
     }
   ]
 }
