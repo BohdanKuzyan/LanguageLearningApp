@@ -1,18 +1,18 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using LanguageLearningApp.Data;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Security.Claims;
 using System.Text;
+using LanguageLearningApp.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-
-namespace PolishLearningApp.Controllers
+namespace LanguageLearningApp.Controllers
 {
     public class UserController : Controller
     {
+
         private readonly ApplicationDbContext _context;
 
         // ConcurrentDictionary służy do przechowywania liczby nieudanych prób logowania dla poszczególnych użytkowników.
@@ -28,7 +28,7 @@ namespace PolishLearningApp.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         [AllowAnonymous]
         public async Task<ActionResult> RegisterView(User user, string confirmPassword, string activationCode)

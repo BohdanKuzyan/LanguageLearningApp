@@ -17,83 +17,79 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LanguageLearningApp
 build_property.RootNamespace = LanguageLearningApp
-build_property.ProjectDir = C:\Users\bohda\source\repos\LanguageLearningApp\LanguageLearningApp\
+build_property.ProjectDir = C:\Users\Piotr\Documents\GitHub\LanguageLearningApp\LanguageLearningApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\bohda\source\repos\LanguageLearningApp\LanguageLearningApp
+build_property.MSBuildProjectDirectory = C:\Users\Piotr\Documents\GitHub\LanguageLearningApp\LanguageLearningApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Pages/Fiszki/FlashcardsView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Pages/Fiszki/FlashcardsView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlzemtpXEZsYXNoY2FyZHNWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Home/AdminPanelView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Home/AdminPanelView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pblBhbmVsVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Home/FlashcardsView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Home/FlashcardsView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGbGFzaGNhcmRzVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Home/GrammarPDFView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Home/GrammarPDFView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHcmFtbWFyUERGVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Home/PrivacyView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Home/PrivacyView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Home/QuizView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Home/QuizView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWl6Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Home/UserPanelView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Home/UserPanelView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyUGFuZWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Shared/Error.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Shared/_AuthLayout.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Shared/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Shared/_MainLayoutUA.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Shared/_MainLayoutUA.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYWluTGF5b3V0VUEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/User/CheckDatabaseConnection.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDaGVja0RhdGFiYXNlQ29ubmVjdGlvbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/User/LoginView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/User/LoginView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpblZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/User/RegisterView.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/User/RegisterView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3RlclZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/_ViewImports.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/_ViewStart.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bohda/source/repos/LanguageLearningApp/LanguageLearningApp/Views/Shared/_Layout.cshtml]
+[C:/Users/Piotr/Documents/GitHub/LanguageLearningApp/LanguageLearningApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qryycwwsjz
