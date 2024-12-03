@@ -1,13 +1,19 @@
-﻿using System.Runtime.InteropServices.JavaScript;
-
-namespace LanguageLearningApp.Models;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
-public class Kody_Rejestracji
+
+namespace LanguageLearningApp.Models
 {
-    [Key]
-    public int Id { get; set; }
-    [Required]
-    public string KOD { get; set; }
-    [Required]
-    public JSType.Date ExpiredAt { get; set; }
+    public class KodyRejestracji
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        public string KOD { get; set; }
+        
+        public DateTime Data_dodania { get; set; }
+
+        [Required]
+        public string Typ { get; set; }
+    }
 }

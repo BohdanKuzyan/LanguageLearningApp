@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using LanguageLearningApp.Data;
+using LanguageLearningApp.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -29,35 +30,37 @@ namespace LanguageLearningApp.Controllers
             return View();
         }
         
-        [HttpPost]
-        [AllowAnonymous]
-        public async Task<ActionResult> RegisterView(User user, string confirmPassword, string activationCode)
+[HttpPost]
+[AllowAnonymous]
+public async Task<ActionResult> RegisterView(User user, string confirmPassword, string activationCode)
+{
+    ModelState.Clear();
+    // Sprawdź, czy hasła są zgodne
+    if (string.IsNullOrEmpty(user.PlainTextPassword) || user.PlainTextPassword != confirmPassword)
+    {
+        ModelState.AddModelError("ConfirmPassword", "Hasła nie są zgodne.");
+    }
+
+    // Walidacja wymagań dotyczących hasła
+    if (string.IsNullOrEmpty(user.PlainTextPassword) ||
+        user.PlainTextPassword.Length < 8 ||
+        !user.PlainTextPassword.Any(char.IsUpper) ||
+        !user.PlainTextPassword.Any(char.IsLower) ||
+        !user.PlainTextPassword.Any(char.IsDigit))
+    {
+        ModelState.AddModelError("PlainTextPassword",
+            "Hasło musi mieć co najmniej 8 znaków, zawierać wielką literę, małą literę i cyfrę.");
+    }
+
+    // Sprawdzenie kodu aktywacyjnego
+    if (string.IsNullOrEmpty(activationCode))
+    {
+        ModelState.AddModelError("ActivationCode", "Kod aktywacyjny jest wymagany.");
+    }
+    else
+    {
+        try
         {
-            ModelState.Clear();
-            // Validate if passwords match
-            if (user.PlainTextPassword != confirmPassword)
-            {
-                ModelState.AddModelError("ConfirmPassword", "Hasła nie są zgodne.");
-            }
-
-            // Validate the password requirements
-            if (string.IsNullOrEmpty(user.PlainTextPassword) ||
-                user.PlainTextPassword.Length < 8 ||
-                !user.PlainTextPassword.Any(char.IsUpper) ||
-                !user.PlainTextPassword.Any(char.IsLower) ||
-                !user.PlainTextPassword.Any(char.IsDigit))
-            {
-                ModelState.AddModelError("PlainTextPassword",
-                    "Hasło musi mieć co najmniej 8 znaków, zawierać wielką literę, małą literę i cyfrę.");
-            }
-
-            // Validate the activation code
-            if (string.IsNullOrEmpty(activationCode))
-            {
-                ModelState.AddModelError("ActivationCode", "Kod aktywacyjny jest wymagany.");
-            }
-
-            // Check if the activation code is valid
             var validCode = await _context.Kody_Rejestracji
                 .AsNoTracking()
                 .FirstOrDefaultAsync(k => k.KOD == activationCode);
@@ -66,23 +69,40 @@ namespace LanguageLearningApp.Controllers
             {
                 ModelState.AddModelError("ActivationCode", "Nieprawidłowy kod aktywacyjny.");
             }
-
-            // If all is valid, convert the password and save
-            if (ModelState.IsValid)
+            else
             {
-                // Convert the password to byte[] before saving
-                user.Haslo = System.Text.Encoding.UTF8.GetBytes(user.PlainTextPassword);
-
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
-                TempData["Message"] = "Rejestracja zakończona sukcesem.";
-                return RedirectToAction("LoginView", "User");
+                user.Typ = validCode.Typ;
             }
-
-            // If there are validation errors, return to the view
-            return View(user);
         }
+        catch (Exception ex)
+        {
+            ModelState.AddModelError("", $"Błąd połączenia z bazą danych: {ex.Message}");
+        }
+    }
 
+    // Ostateczne sprawdzenie ModelState
+    if (!ModelState.IsValid)
+    {
+        return View(user);
+    }
+
+    // Zapis użytkownika do bazy danych
+    try
+    {
+        user.Haslo = Encoding.UTF8.GetBytes(user.PlainTextPassword);
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
+        TempData["Message"] = "Rejestracja zakończona sukcesem.";
+        return RedirectToAction("LoginView", "User");
+    }
+    catch (Exception ex)
+    {
+        ModelState.AddModelError("", $"Wystąpił problem podczas zapisu: {ex.Message}");
+        return View(user);
+    }
+}
+
+        
         [AllowAnonymous]
         public ActionResult LoginView()
         {

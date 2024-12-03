@@ -12,9 +12,14 @@
             @Html.Label("Email", "Email", new { @class = "block text-sm font-medium text-gray-300" })
             @Html.TextBox("email", null, new { @type = "email", @class = "mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm text-white" })
         </div>
-        <div class="mb-6">
+        <div class="mb-6 relative">
             @Html.Label("Password", "Hasło", new { @class = "block text-sm font-medium text-gray-300" })
-            @Html.Password("password", null, new { @class = "mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm text-white" })
+            <div class="relative">
+                @Html.Password("password", null, new { id = "password", @class = "mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm text-white pr-10" })
+                <button type="button" class="absolute inset-y-0 right-0 px-3 flex items-center text-gray-400 hover:text-white focus:outline-none" onclick="togglePasswordVisibility('password')">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
         <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Zaloguj</button>
         @Html.ValidationSummary(true, "", new { @class = "text-red-500 text-sm mt-4" })
@@ -24,3 +29,16 @@
         <p class="text-gray-400">Nie masz jeszcze konta? <a href="/User/RegisterView" class="text-blue-400 hover:underline">Zarejestruj się</a></p>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        function togglePasswordVisibility(inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+    </script>
+}

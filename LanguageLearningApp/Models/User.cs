@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema; // Add this import for NotMapped
+// Add this import for NotMapped
+
+namespace LanguageLearningApp.Models;
 
 public class User
 {
@@ -35,8 +34,6 @@ public class User
 
     [Required(ErrorMessage = "Wybierz awatar.")]
     public string Awatar { get; set; } = "inne"; // Domyślny awatar ustawiony na "inne"
+    
+    public string Typ { get; set; }
 }
-
-
-
-

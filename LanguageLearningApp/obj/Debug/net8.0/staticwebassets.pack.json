@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LanguageLearningApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LanguageLearningApp.bundle.scp.css"
+      "PackagePath": "staticwebassets\\LanguageLearningApp.1a38mjgrfb.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\PDF\\Gramar.pdf",
@@ -99,6 +99,10 @@
     {
       "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LanguageLearningApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LanguageLearningApp.Microsoft.AspNetCore.StaticWebAssets.props",

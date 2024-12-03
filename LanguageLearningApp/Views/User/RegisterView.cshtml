@@ -30,17 +30,23 @@
         </div>
 
         <!-- Hasło -->
-        <div class="mb-4">
+        <div class="mb-4 relative">
             @Html.LabelFor(model => model.PlainTextPassword, "Hasło", new { @class = "block text-sm font-medium text-gray-300" })
-            @Html.PasswordFor(model => model.PlainTextPassword, new { @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            @Html.PasswordFor(model => model.PlainTextPassword, new { id = "password", @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            <button type="button" class="absolute right-3 top-8 text-gray-400 hover:text-white focus:outline-none" onclick="togglePasswordVisibility('password')">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </button>
             <small class="text-gray-500">Min. 8 znaków, w tym wielka litera, mała litera i cyfra.</small>
             @Html.ValidationMessageFor(model => model.PlainTextPassword, "", new { @class = "text-red-500 text-sm" })
         </div>
 
         <!-- Powtórz hasło -->
-        <div class="mb-4">
+        <div class="mb-4 relative">
             @Html.Label("ConfirmPassword", "Powtórz hasło", new { @class = "block text-sm font-medium text-gray-300" })
-            @Html.Password("ConfirmPassword", null, new { @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            @Html.Password("ConfirmPassword", null, new { id = "confirmPassword", @class = "mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-white" })
+            <button type="button" class="absolute right-3 top-8 text-gray-400 hover:text-white focus:outline-none" onclick="togglePasswordVisibility('confirmPassword')">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </button>
             @Html.ValidationMessage("ConfirmPassword", "", new { @class = "text-red-500 text-sm" })
         </div>
 
@@ -82,3 +88,16 @@
         <p class="text-gray-500">Masz już konto? <a href="/User/LoginView" class="text-blue-400 hover:underline">Zaloguj się</a></p>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        function togglePasswordVisibility(inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+    </script>
+}

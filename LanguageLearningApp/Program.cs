@@ -38,7 +38,12 @@ builder.Services.AddControllersWithViews(options =>
 });
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ManufakturaSukcesuDB")));
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("ManufakturaSukcesuDB"),
+        new MySqlServerVersion(new Version(8, 4, 3)), // Ustaw wersję zgodną z Twoim serwerem MySQL
+        mySqlOptions => mySqlOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null) // Dodano obsługę retry
+    ));
+
 
 var app = builder.Build();
 

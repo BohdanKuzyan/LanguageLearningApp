@@ -2,11 +2,8 @@
 using LanguageLearningApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace PolishLearningApp.Controllers
+namespace LanguageLearningApp.Controllers
 {
     public class FiszkiController : Controller
     {
