@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Dodaj fiszkę";
+}
+
+<div class="max-w-md mx-auto mt-8">
+    <h2 class="text-lg font-semibold mb-4">Dodaj nową fiszkę</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <p class="text-red-500">@TempData["Error"]</p>
+    }
+
+    <form method="post" asp-action="AddFlashcard">
+        <div class="mb-4">
+            <label for="TekstPolski" class="block text-gray-700">Tekst Polski:</label>
+            <input type="text" id="TekstPolski" name="TekstPolski" class="w-full border rounded px-3 py-2" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="TekstObcy" class="block text-gray-700">Tekst Ukraiński/Rosyjski:</label>
+            <input type="text" id="TekstObcy" name="TekstObcy" class="w-full border rounded px-3 py-2" required>
+        </div>
+
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Dodaj</button>
+    </form>
+</div>

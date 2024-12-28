@@ -1,108 +1,104 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LanguageLearningApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\LanguageLearningApp.1a38mjgrfb.bundle.scp.css"
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LanguageLearningApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LanguageLearningApp.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\PDF\\Gramar.pdf",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\PDF\\Gramar.pdf",
       "PackagePath": "staticwebassets\\PDF\\Gramar.pdf"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\styles.css",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\Logos\\LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\Logos\\LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png",
       "PackagePath": "staticwebassets\\images\\Logos\\LOGO_biale_manufaktura_sukcesu_szkola_jezykowa.png"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\background\\background-letters.png",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\background\\background-letters.png",
       "PackagePath": "staticwebassets\\images\\background\\background-letters.png"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\pl.png",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\pl.png",
       "PackagePath": "staticwebassets\\images\\language_icons\\pl.png"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\ua.png",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\language_icons\\ua.png",
       "PackagePath": "staticwebassets\\images\\language_icons\\ua.png"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\m.png",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\m.png",
       "PackagePath": "staticwebassets\\images\\register_icons\\m.png"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\n.png",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\n.png",
       "PackagePath": "staticwebassets\\images\\register_icons\\n.png"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\w.png",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\images\\register_icons\\w.png",
       "PackagePath": "staticwebassets\\images\\register_icons\\w.png"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Piotr\\Documents\\GitHub\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\bohda\\source\\repos\\LanguageLearningApp\\LanguageLearningApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LanguageLearningApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.LanguageLearningApp.Microsoft.AspNetCore.StaticWebAssets.props",

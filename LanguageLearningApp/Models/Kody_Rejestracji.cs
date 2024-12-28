@@ -11,7 +11,7 @@ namespace LanguageLearningApp.Models
         [Required]
         public string KOD { get; set; }
         
-        public DateTime Data_dodania { get; set; }
+        public DateTime? Data_dodania { get; set; }
 
         [Required]
         public string Typ { get; set; }

@@ -2,11 +2,316 @@
 
 @{
     // Używamy HttpContextAccessor, aby pobrać dostęp do HttpContext i sesji
-    var layoutName = HttpContextAccessor.HttpContext.Session.GetString("Layout") ?? "_Layout";
+    var layoutName = HttpContextAccessor.HttpContext.Session.GetString("Layout") ?? "_AdminLayout";
     Layout = $"~/Views/Shared/{layoutName}.cshtml";
     ViewData["Title"] = "AdminPanel";
 }
 
 <div class="text-center">
-    <h1 class="display-4">AdminPanel</h1>
+    <div class="w-full max-w-md mx-auto">
+        <!-- Pierwszy element menu -->
+        <div class="border rounded">
+            <button class="w-full text-left px-4 py-2 text-sm font-medium bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring" onclick="toggleDropdown('dropdown1')">
+                Wyniki uczniów
+            </button>
+            <div id="dropdown1" class="hidden px-4 py-2 text-sm text-gray-700 border-t bg-white">
+                <p>Opcja 1</p>
+                <p>Opcja 2</p>
+            </div>
+        </div>
+        <div class="border rounded">
+                    <button class="w-full text-left px-4 py-2 text-sm font-medium bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring" onclick="toggleDropdown('dropdown2')">
+                        Generowanie kodów
+                    </button>
+                    <div id="dropdown2" class="hidden px-4 py-2 text-sm text-gray-700 border-t bg-white">
+                        <div class="text-center">
+                            <!-- Dropdown do wyboru typu użytkownika -->
+                            <div class="relative inline-block">
+                                <button class="bg-gray-200 px-4 py-2 rounded-md focus:outline-none" onclick="toggleDropdown('userTypeDropdown')">
+                                    Wybierz typ
+                                </button>
+                                <div id="userTypeDropdown" class="hidden absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg">
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100" onclick="setUserType('USER')">Użytkownik</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100" onclick="setUserType('ADMIN')">Admin</button>
+                                </div>
+                            </div>
+                                
+                            <!-- Wyświetlanie wybranego typu użytkownika -->
+                            <p id="selectedType" class="text-gray-700 font-medium mt-4">Nie wybrano typu</p>
+                                
+                            <!-- Sekcja generowania kodu -->
+                            <div class="flex items-center justify-center mt-6 space-x-4">
+                                <button id="generateBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none" onclick="generateAndSendCode()">
+                                    Generuj
+                                </button>
+                                <input id="codeDisplay" type="text" class="border px-4 py-2 rounded-md w-40 text-center" placeholder="Kod" readonly>
+                                <button id="copyBtn" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none" onclick="copyCode()">
+                                    Kopiuj
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+
+    
+        <!-- Trzeci element menu -->
+        <div class="border rounded mt-2">
+            <button class="w-full text-left px-4 py-2 text-sm font-medium bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring" onclick="toggleDropdown('dropdown3')">
+                Dodaj nową fiszkę
+            </button>
+            <div id="dropdown3" class="hidden px-4 py-2 text-sm text-gray-700 border-t bg-white">
+                <button onclick="toggleAddFlashcard()" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Dodanie fiszki</button>
+                <button onclick="toggleDeleteFlashcard()" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Usuń fiszkę</button>
+                
+                <!-- Sekcja dodania fiszki -->
+                <div id="addFlashcardSection" class="hidden mt-4">
+                    <label for="polishText" class="block text-sm font-medium text-gray-700">Napis polski</label>
+                    <input type="text" id="polishText" class="border rounded-md w-full px-4 py-2 mt-1" placeholder="Wpisz tekst po polsku">
+                    
+                    <label for="foreignText" class="block text-sm font-medium text-gray-700 mt-4">Napis ukraiński/rosyjski</label>
+                    <input type="text" id="foreignText" class="border rounded-md w-full px-4 py-2 mt-1" placeholder="Wpisz tekst po ukraińsku lub rosyjsku">
+                    
+                    <button onclick="submitFlashcard()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mt-4">Dodaj</button>
+                </div>
+            
+                <!-- Sekcja usuwania fiszki -->
+                <div id="deleteFlashcardSection" class="hidden mt-4">
+                    <p class="text-gray-700">Funkcja usuwania fiszki zostanie tutaj zaimplementowana.</p>
+                </div>
+            </div>
+
+        </div>
+
+    
+        <!-- Kolejne elementy menu -->
+        <div class="border rounded mt-2">
+            <button class="w-full text-left px-4 py-2 text-sm font-medium bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring" onclick="toggleDropdown('dropdown4')">
+                Dodaj nowy test
+            </button>
+            <div id="dropdown4" class="hidden px-4 py-2 text-sm text-gray-700 border-t bg-white">
+                <p>Opcja 1</p>
+                <p>Opcja 2</p>
+            </div>
+        </div>
+    
+        <div class="border rounded mt-2">
+            <button class="w-full text-left px-4 py-2 text-sm font-medium bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring" onclick="toggleDropdown('dropdown5')">
+                Zarządzanie użytkownikami
+            </button>
+            <div id="dropdown5" class="hidden px-4 py-2 text-sm text-gray-700 border-t bg-white">
+                <button class="w-full text-left text-blue-500 hover:underline mb-4" onclick="fetchUsers()">Usuwanie użytkownika</button>
+                <div id="userTable" class="hidden mt-4 overflow-x-auto">
+                    <table class="table-auto w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="border px-4 py-2 text-left font-semibold text-gray-700">ID</th>
+                                <th class="border px-4 py-2 text-left font-semibold text-gray-700">Imię</th>
+                                <th class="border px-4 py-2 text-left font-semibold text-gray-700">Nazwisko</th>
+                                <th class="border px-4 py-2 text-left font-semibold text-gray-700">Email</th>
+                                <th class="border px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                                <th class="border px-4 py-2 text-left font-semibold text-gray-700">Akcja</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody" class="divide-y divide-gray-200">
+                            <!-- Wiersze zostaną wypełnione przez JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
 </div>
+<script>
+    function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+    }
+</script>
+<script>
+    let selectedType = ""; // Wybrany typ użytkownika
+    let generatedCode = ""; // Wygenerowany kod
+    
+    // Rozwijane menu do wyboru typu użytkownika
+    function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+    }
+    
+    // Ustawienie typu użytkownika
+    function setUserType(type) {
+        selectedType = type;
+        document.getElementById('selectedType').innerText = `Wybrano: ${type}`;
+        toggleDropdown('userTypeDropdown');
+    }
+    
+    // Generowanie i wysyłanie kodu
+    function generateAndSendCode() {
+        if (!selectedType) {
+            alert("Wybierz typ użytkownika przed wygenerowaniem kodu.");
+            return;
+        }
+    
+        // Generowanie losowego kodu
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        generatedCode = "";
+        for (let i = 0; i < 6; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            generatedCode += characters[randomIndex];
+        }
+    
+        // Wyświetlenie kodu w polu tekstowym
+        document.getElementById("codeDisplay").value = generatedCode;
+    
+        // Wysyłanie kodu do backendu za pomocą AJAX
+        $.ajax({
+            url: '/User/GenerateCodeToDb',
+            type: 'POST',
+            data: {
+                code: generatedCode,
+                userType: selectedType
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('input[name="__RequestVerificationToken"]').val() // Token CSRF
+            },
+            success: function (response) {
+                alert(response.message || "Kod został zapisany do bazy danych.");
+            },
+            error: function (xhr, status, error) {
+                console.error("Błąd:", xhr.responseText);
+                alert("Nie udało się zapisać kodu do bazy.");
+            }
+        });
+    }
+    
+    // Kopiowanie kodu do schowka
+    function copyCode() {
+        const codeField = document.getElementById("codeDisplay");
+        if (codeField.value) {
+            navigator.clipboard.writeText(codeField.value).then(() => {
+                alert("Kod został skopiowany do schowka.");
+            }).catch(err => {
+                alert("Nie udało się skopiować kodu.");
+                console.error(err);
+            });
+        } else {
+            alert("Brak kodu do skopiowania.");
+        }
+    }
+</script>
+<script>
+    async function fetchUsers() {
+        try {
+            const response = await fetch('/User/GetUsers');
+            const users = await response.json();
+
+            if (response.ok) {
+                const tableBody = document.getElementById('userTableBody');
+                tableBody.innerHTML = ''; // Czyść tabelę
+
+                users.forEach(user => {
+                    const row = `
+                        <tr class="hover:bg-gray-50">
+                            <td class="border px-4 py-2">${user.id}</td>
+                            <td class="border px-4 py-2">${user.imie}</td>
+                            <td class="border px-4 py-2">${user.nazwisko}</td>
+                            <td class="border px-4 py-2">${user.email}</td>
+                            <td class="border px-4 py-2">${user.typ}</td>
+                            <td class="border px-4 py-2">
+                                <button 
+                                    class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2"
+                                    onclick="deleteUser(${user.id})">
+                                    Usuń
+                                </button>
+                            </td>
+                        </tr>`;
+                    tableBody.innerHTML += row;
+                });
+
+                document.getElementById('userTable').classList.remove('hidden');
+            } else {
+                alert('Nie udało się załadować użytkowników.');
+            }
+        } catch (error) {
+            console.error('Błąd:', error);
+        }
+    }
+
+    async function deleteUser(userId) {
+        if (!confirm('Czy na pewno chcesz usunąć tego użytkownika?')) {
+            return;
+        }
+
+        try {
+            const response = await fetch(`/User/DeleteUser/${userId}`, {
+                method: 'DELETE'
+            });
+
+            if (response.ok) {
+                alert('Użytkownik został usunięty.');
+                fetchUsers(); // Odśwież tabelę
+            } else {
+                alert('Nie udało się usunąć użytkownika.');
+            }
+        } catch (error) {
+            console.error('Błąd:', error);
+        }
+    }
+</script>
+
+<script>
+    function toggleAddFlashcard() {
+        const addSection = document.getElementById('addFlashcardSection');
+        const deleteSection = document.getElementById('deleteFlashcardSection');
+        
+        // Ukryj sekcję usuwania fiszki i przełącz widoczność sekcji dodawania
+        deleteSection.classList.add('hidden');
+        addSection.classList.toggle('hidden');
+    }
+
+    function toggleDeleteFlashcard() {
+        const addSection = document.getElementById('addFlashcardSection');
+        const deleteSection = document.getElementById('deleteFlashcardSection');
+        
+        // Ukryj sekcję dodawania fiszki i przełącz widoczność sekcji usuwania
+        addSection.classList.add('hidden');
+        deleteSection.classList.toggle('hidden');
+    }
+
+    function submitFlashcard() {
+        const polishText = document.getElementById('polishText').value.trim();
+        const foreignText = document.getElementById('foreignText').value.trim();
+    
+        if (!polishText || !foreignText) {
+            alert('Wypełnij oba pola przed dodaniem fiszki!');
+            return;
+        }
+    
+        $.ajax({
+            url: '/Fiszki/AddFlashcard', // Upewnij się, że ścieżka jest poprawna
+            type: 'POST',
+            data: {
+                TekstPolski: polishText,
+                TekstObcy: foreignText // Klucze muszą zgadzać się z nazwami parametrów w kontrolerze
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('input[name="__RequestVerificationToken"]').val()
+            },
+            success: function(response) {
+                alert('Fiszka została dodana!');
+                document.getElementById('polishText').value = '';
+                document.getElementById('foreignText').value = '';
+            },
+            error: function(xhr, status, error) {
+                console.error('Błąd:', xhr.responseText);
+                alert('Nie udało się dodać fiszki.');
+            }
+        });
+    }
+
+</script>
+

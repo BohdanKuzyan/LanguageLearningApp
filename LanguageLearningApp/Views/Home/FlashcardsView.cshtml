@@ -1,6 +1,4 @@
-﻿@model IEnumerable<LanguageLearningApp.Models.Dzial>
-
-@inject IHttpContextAccessor HttpContextAccessor
+﻿@inject IHttpContextAccessor HttpContextAccessor
 
 @{
     var layoutName = HttpContextAccessor.HttpContext.Session.GetString("Layout") ?? "_Layout";
@@ -12,13 +10,60 @@
     <h1 class="text-3xl font-bold text-gray-900">Fiszki</h1>
 </div>
 
-<div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        @foreach (var dzial in Model)
-        {
-            <div class="bg-white rounded-lg shadow-lg p-6 hover:bg-blue-100 transition">
-                <h2 class="text-lg font-semibold text-gray-800">@dzial.Nazwa</h2>
-            </div>
-        }
+<div class="flex justify-center items-center h-screen">
+    <div id="flashcard" class="bg-white w-96 h-40 rounded-lg shadow-lg flex items-center justify-center cursor-pointer transition duration-300 transform hover:scale-105"
+         onclick="toggleFlashcard()">
+        <p id="flashcard-text" class="text-xl font-bold text-gray-900">Kliknij, aby zobaczyć więcej</p>
     </div>
 </div>
+
+<div class="text-center mt-8">
+    <button onclick="nextFlashcard()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
+        Następna fiszka
+    </button>
+</div>
+
+<script>
+    let currentFlashcardIndex = 0;
+    let flashcards = []; // Lista fiszek zostanie załadowana z backendu.
+    let showingPolish = true; // Zmienna śledząca, czy pokazujemy tekst polski czy obcy.
+
+    // Funkcja przełączania tekstu na fiszce.
+    function toggleFlashcard() {
+        if (flashcards.length === 0) return;
+
+        const flashcardText = document.getElementById('flashcard-text');
+        if (showingPolish) {
+            flashcardText.innerText = flashcards[currentFlashcardIndex].tekstObcy;
+        } else {
+            flashcardText.innerText = flashcards[currentFlashcardIndex].tekstPolski;
+        }
+        showingPolish = !showingPolish;
+    }
+
+    // Funkcja ładowania następnej fiszki.
+    function nextFlashcard() {
+        if (flashcards.length === 0) return;
+
+        currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length; // Obsługa pętli fiszek.
+        showingPolish = true;
+
+        const flashcardText = document.getElementById('flashcard-text');
+        flashcardText.innerText = flashcards[currentFlashcardIndex].tekstPolski;
+    }
+
+    // Ładowanie fiszek z backendu.
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('/Fiszki/GetAllFlashcards')
+            .then(response => response.json())
+            .then(data => {
+                flashcards = data;
+                if (flashcards.length > 0) {
+                    document.getElementById('flashcard-text').innerText = flashcards[0].tekstPolski;
+                } else {
+                    document.getElementById('flashcard-text').innerText = 'Brak fiszek do wyświetlenia.';
+                }
+            })
+            .catch(error => console.error('Błąd podczas ładowania fiszek:', error));
+    });
+</script>
